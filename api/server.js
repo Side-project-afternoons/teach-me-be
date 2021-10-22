@@ -8,6 +8,7 @@ server.use(helmet());
 server.use(cors());
 
 server.use('/api/auth', require('./routes/auth'));
+server.use('/api/course', require('./routes/course'))
 
 server.use("*", (res, req /*eslint-disable-line */) => {
   res.status(404).json({ message: "invalid endpoint!" });
