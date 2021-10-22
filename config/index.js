@@ -1,5 +1,6 @@
 require("dotenv").config();
 module.exports = {
+  jwt_secret: process.env.JWT_SECRET || "afternoon-side-project",
   port: process.env.PORT || 8000,
   environment: process.env.NODE_ENV || "development",
   development: {
